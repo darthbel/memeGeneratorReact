@@ -45,7 +45,7 @@ class MemeGenerator extends Component  {
 
 	render() {
 		return (
-			<div className="container p-5">
+			<div className="container py-5">
 			    <div className="row">
 			      <form className="col-sm-6 memeForm">
 			      	<div className="form-group">
