@@ -46,11 +46,11 @@ class MemeGenerator extends Component  {
 
 	render() {
 		return (
-			<div className="container py-5">
+			<div className="container memeGeneratorContainer py-5">
 			    <div className="row">
 			      	<form className="col-sm-6 memeForm pb-4">
 				      	<div className="form-group">
-				      		<label for="topCaption">Top Caption:</label>
+				      		<label htmlFor="topCaption">Top Caption:</label>
 				      		<input 
 						      	className="form-control" 
 						      	type="text" 
@@ -61,7 +61,7 @@ class MemeGenerator extends Component  {
 				      		/>
 				      	</div>
 				      	<div className="form-group">
-				      		<label for="bottomCaption">Bottom Caption:</label>
+				      		<label htmlFor="bottomCaption">Bottom Caption:</label>
 				      		<input 
 						      	className="form-control" 
 						      	type="text" 
@@ -72,7 +72,7 @@ class MemeGenerator extends Component  {
 				      		/>
 				      	</div>
 				      	<div className="form-group">
-				      		<label for="fontSize">Change Font Size (in pixels):</label>
+				      		<label htmlFor="fontSize">Change Font Size (in pixels):</label>
 					      	<input 
 					      		className="form-control" 
 					      		type="number" 

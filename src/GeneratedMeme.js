@@ -1,6 +1,7 @@
-import React, {Component} from "react"
+import React from "react"
 import './index.css';
 
+// Meme that is generated
 function GeneratedMeme(props) {
 	return(
 			<div className="col-sm-6 meme">
