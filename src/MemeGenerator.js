@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import './index.css';
+import GeneratedMeme from './GeneratedMeme'
 
 class MemeGenerator extends Component  {
 	constructor() {
@@ -47,63 +48,52 @@ class MemeGenerator extends Component  {
 		return (
 			<div className="container py-5">
 			    <div className="row">
-			      <form className="col-sm-6 memeForm">
-			      	<div className="form-group">
-			      		<label for="topCaption">Top Caption:</label>
-			      		<input 
-					      	className="form-control" 
-					      	type="text" 
-					      	name="topCaption" 
-					      	value={this.state.topCaption} 
-					      	placeholder="Start typing..." 
-					      	onChange={this.handleChange} 
-			      		/>
-			      	</div>
-			      	<div className="form-group">
-			      		<label for="bottomCaption">Bottom Caption:</label>
-			      		<input 
-					      	className="form-control" 
-					      	type="text" 
-					      	name="bottomCaption" 
-					      	value={this.state.bottomCaption} 
-					      	placeholder="Start typing..." 
-					      	onChange={this.handleChange} 
-			      		/>
-			      	</div>
-			      	<div className="form-group">
-			      		<label for="fontSize">Change Font Size (in pixels):</label>
-				      	<input 
-				      		className="form-control" 
-				      		type="number" 
-				      		name="fontSize" 
-				      		value={this.state.fontSize}
-				      		placeholder={this.state.fontSize}
-				      		onChange={this.handleChange} 
-				      	/>
-			      	</div>
-			      	<button 
-			      		type="button" 
-			      		name="btnRandomImg" 
-			      		onClick={this.handleClick}
-			      	>Get Another Random Image</button>
-
-
-			      </form>
-			      <div className="col-sm-6 meme">
-			      		<img className="img-fluid w-100" src={this.state.randomImg} alt=""/>
-			      		<div className="card-img-overlay d-flex flex-column text-break">
-		      				<h2 
-		      					className="topCaption text-white mb-auto" 
-		      					style={{'fontSize': this.state.fontSize + 'px'}}>
-		      					{this.state.topCaption.toUpperCase()}
-		      				</h2>
-		      				<h2 
-			      				className="bottomCaption text-white" 
-			      				style={{fontSize: this.state.fontSize  + 'px'}}>
-			      				{this.state.bottomCaption.toUpperCase()}
-		      				</h2>
-			      		</div>
-			      </div>
+			      	<form className="col-sm-6 memeForm pb-4">
+				      	<div className="form-group">
+				      		<label for="topCaption">Top Caption:</label>
+				      		<input 
+						      	className="form-control" 
+						      	type="text" 
+						      	name="topCaption" 
+						      	value={this.state.topCaption} 
+						      	placeholder="Start typing..." 
+						      	onChange={this.handleChange} 
+				      		/>
+				      	</div>
+				      	<div className="form-group">
+				      		<label for="bottomCaption">Bottom Caption:</label>
+				      		<input 
+						      	className="form-control" 
+						      	type="text" 
+						      	name="bottomCaption" 
+						      	value={this.state.bottomCaption} 
+						      	placeholder="Start typing..." 
+						      	onChange={this.handleChange} 
+				      		/>
+				      	</div>
+				      	<div className="form-group">
+				      		<label for="fontSize">Change Font Size (in pixels):</label>
+					      	<input 
+					      		className="form-control" 
+					      		type="number" 
+					      		name="fontSize" 
+					      		value={this.state.fontSize}
+					      		placeholder={this.state.fontSize}
+					      		onChange={this.handleChange} 
+					      	/>
+				      	</div>
+				      	<button 
+				      		type="button" 
+				      		name="btnRandomImg" 
+				      		onClick={this.handleClick}
+				      	>Get Another Random Image</button>
+			      	</form>
+			      	<GeneratedMeme 
+			      		imgSrc={this.state.randomImg}
+			      		topCaption={this.state.topCaption}
+			      		bottomCaption={this.state.bottomCaption}
+			      		fontSize={this.state.fontSize}
+			      	/>
 			    </div>
 		    </div>
 		)
