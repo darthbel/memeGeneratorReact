@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.topCaption, .bottomCaption{
+	color: white;
+	-webkit-text-stroke-width: 1px;
+   	-webkit-text-stroke-color: black;
+   	font-family: impact;
+   	text-align: center;
+}
+
+
+.topCaption{
+
+}
+
+.bottomCaption{
+}

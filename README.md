@@ -1,3 +1,5 @@
 ## Meme Generator App
 
-This will be created using React and Bootstrap
+Simple Meme Generator, made using React, Javascript and Bootstrap.
+It calls the get Meme images API from: https://api.imgflip.com
+
